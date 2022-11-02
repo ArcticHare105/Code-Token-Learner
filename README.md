@@ -7,7 +7,7 @@ pytorch
 javalang  
 
 ## Data 
-BigCloneBench snippets and clone pairs in BCB.zip  
+BigCloneBench snippets and clone pairs in BCB.zip (refer to \url[FA-AST]{https://github.com/jacobwwh/graphmatch_clone})
 
 ## Running 
 python run_bcb.py  
