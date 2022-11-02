@@ -186,44 +186,6 @@ class SelfTransformer(torch.nn.Module):
             x = ff(x) + x
         return x
 
-# class GCNNet(torch.nn.Module):
-#     def __init__(self, vocablen, embedding_dim, out_dim):
-#         super().__init__()
-#         self.embed = nn.Embedding(vocablen, embedding_dim)
-#         self.gcn1 = GCNConv(embedding_dim, embedding_dim)
-#         self.gcn2 = GCNConv(embedding_dim, out_dim)        
-
-#         self.relu = nn.ReLU(inplace=True)
-#         self.sigmoid = nn.Sigmoid()
-
-#     def forward(self, data):
-#         x, edge_index, _ = data
-#         x = self.relu(self.gcn1(x, edge_index))
-#         att = self.sigmoid(self.gcn2(x, edge_index))
-#         return x
-
-# class TransGCNLayer(torch.nn.Module):
-#     def __init__(self, num_inp, num_out, heads, dim_head, dropout):
-#         super().__init__()
-#         self.norm_inp = nn.LayerNorm(num_inp)
-#         self.norm_out = nn.LayerNorm(num_inp)        
-
-#         self.gcnlayer = GCNConv(num_inp, num_out)
-#         self.attention = Attention(num_inp, heads = heads, dim_head = dim_head, dropout = dropout)
-
-#         self.fead_forward = FeedForward(num_inp, num_out, dropout = dropout)
-
-#     def forward(self, x, edge_index):
-#         x_norm = self.norm_inp(x)
-#         gcn_embed = self.gcnlayer(x_norm, edge_index)
-#         trans_embed = self.attention(x_norm)
-#         fusion_embed = x + gcn_embed + trans_embed
-
-#         fusion_norm = self.norm_out(fusion_embed)
-#         out = self.fead_forward(fusion_norm)
-
-#         return out + fusion_embed
-
 
 class FeatureEmbedding(torch.nn.Module):
     def __init__(self, vocablen, num_inp):
