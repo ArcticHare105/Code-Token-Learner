@@ -5,6 +5,7 @@ The official implement of "Efficient Transformer with Code Token Learner for Cod
 Requires:   
 pytorch    
 javalang  
+torch_geometric
 
 ## Data 
 BigCloneBench snippets and clone pairs in BCB.zip (refer to [FA-AST](https://github.com/jacobwwh/graphmatch_clone))
