@@ -153,13 +153,13 @@ for epoch in epochs:
         epochs.set_description("Epoch (Loss=%g)" % round(loss,5))
 
     devresults=test(validdata)
-    devfile=open('ggnnbcbresult/' + 'dev_epoch_'+str(epoch+1),mode='w')
+    devfile=open('bcbresult/' + 'dev_epoch_'+str(epoch+1),mode='w')
     for res in devresults:
         devfile.write(str(res)+'\n')
     devfile.close()
 
     testresults = test(testdata)        
-    resfile=open('ggnnbcbresult/' + 'test_epoch_'+str(epoch+1),mode='w')
+    resfile=open('bcbresult/' + 'test_epoch_'+str(epoch+1),mode='w')
     for res in testresults:
         resfile.write(str(res)+'\n')
     resfile.close()
