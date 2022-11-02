@@ -11,7 +11,7 @@ torch_geometric
 BigCloneBench snippets and clone pairs in BCB.zip (refer to [FA-AST](https://github.com/jacobwwh/graphmatch_clone))
 
 ## Running 
-python run_bcb.py  
+python codeTrans_bcb.py  
 
 This operation include training, validation, testing and writing test results to files.   
 
